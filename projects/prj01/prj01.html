@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kevin Sparks</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<!-- Header -->
+				<section id="header" class="skel-layers-fixed">
+					<header>
+						<!-- <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span> -->
+						<h1 id="logo"><a href="http://kevinsparks.io/#projects">Projects</a></h1>
+						<!-- <p>geospatial information scientist</p> -->
+					</header>
+					<nav id="nav">
+
+					</nav>
+					<footer>
+						<!-- <ul class="icons">
+							<li><a href="https://twitter.com/sparksk16" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/sparksk" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+						</ul> -->
+					</footer>
+				</section>
+
+
+			<!-- Main -->
+				<div id="main">
+
+					<!-- One -->
+						<section id="one">
+							<div class="container">
+								<h2>Geographic ground-based image classification</h2>
+								<p>Kevin Sparks, Jonathan Nelson</p>
+								<h4>Brief introduction</h4>
+								<p>In our geographic ground-based image classification analysis, we developed Support Vector Machine (SVM) models to predict spatially-linked, content-independent information (land cover type) associated with on-the-ground <a href="https://www.flickr.com/">Flickr</a> images of landscapes based on an input of content-dependent information (visual attributes) extracted from the images.</p>
+								<h4>Overview</h4>
+								<p>We adapt the standard two-part approach to image classification. First, we extract visual signatures from on-the-ground Flickr images to form our feature space. Second, we construct SVM models based on training data which include predictor variables (visual signatures) and well-defined labels (land cover types). To generate the land cover labels for each image, we spatially joined each Flickr image to its corresponding <a href="http://www.mrlc.gov/nlcd2006.php">National Land Cover Dataset (NLCD)</a> classification.</p>
+								<div class="features">
+									<article>
+										<a href="images/fig1.jpg" target="_blank" class="image"><img src="images/fig1.jpg" alt="" /></a>
+											<div class="inner">
+												<p>Visual explanation of the process of spatially joining image data to NLCD land cover classes for the geolocated Flickr images. </p>
+											</div>
+									</article>
+								</div>
+
+								<p>We created an image montage of on-the-ground images grouped by land cover type and sorted dark to bright, left to right. The approach is useful, because it allows us to visualize the global overview of the distribution of photos across land cover types, together with the local variability of photos found within certain land cover types. At full resolution, the montage can be zoomed to the individual-photograph level, thus making it easy to quickly scan for representative images, potential outliers, etc. </p>
+
+								<div class="features">
+									<article>
+										<a href="images/fig2.jpg" target="_blank" class="image"><img src="images/fig2.jpg" alt="" /></a>
+											<div class="inner">
+												<p>An image montage of the geolocated Flickr images, distributed across the 16 land cover classes.</p>
+											</div>
+									</article>
+								</div>
+
+								<div class="features">
+									<article>
+										<a href="images/fig4.jpg" target="_blank" class="image"><img src="images/fig4.jpg" alt="" /></a>
+											<div class="inner">
+												<p>Examples of prototypical Forest (left) and Water (right) images.</p>
+											</div>
+									</article>
+								</div>
+
+								<p>Once each image was assigned the visual signature features, and a land cover class label, a series of SVM classifications were performed. To reiterate, the visual signatures are used to predict land cover class. </p>
+
+								<div class="features">
+									<article>
+										<a href="images/fig3big.png" target="_blank" class="image"><img src="images/fig3.jpg" alt="" /></a>
+											<div class="inner">
+												<p>An example of the classification process workflow. Each individual gray block represents a unique SVM model, classifying between the two land cover classes in the blue blocks.</p>
+											</div>
+									</article>
+								</div>
+
+								<p>SVM accuracy was influenced by messy data seen below. Many images have no environmental land cover information present in them, and thus are noise.</p>
+
+								<div class="features">
+									<article>
+										<a href="images/fig5.jpg" target="_blank" class="image"><img src="images/fig5.jpg" alt="" /></a>
+											<div class="inner">
+												<p>Examples of ideal, clean data tinted in green on the left. Examples of messy, bad, undesirable data tinted in red on the right.</p>
+											</div>
+									</article>
+								</div>	
+								<h4>Summary</h4>
+								<p>Undesirable, messy data was pruned by median brightness values, but images depicted above, for example, still remained. We very much expect that with cleaner data, the accuracy rate for all SVM models in these series of experiments will significantly increase. Most importantly, in the face of messy data, the visual signature features proved their validity. This was especially the case in distinguishing between Forest images and Water images. We believe it is important to first empirically prove the usefulness of visual signatures in the classification process. As we continue this work, we will incorporate pixel by pixel feature space and explore the usefulness of tags associated with the Flickr photos. </p>							
+
+							</div>
+						</section>
+				</div>
+
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<ul class="copyright">
+							<!-- <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+						</ul>
+					</div>
+				</section>
+
+		</div>
+	</body>
+</html>
