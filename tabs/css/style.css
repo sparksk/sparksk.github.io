@@ -293,7 +293,7 @@ div.footer {
 }
 
 #wrapper {
-  /*background-color: rgb(250,250,250);*/
+/*  background-color: rgb(245,245,245);*/
   width: 56%;
   margin-left: auto;
   margin-right: auto;
@@ -336,6 +336,10 @@ a:hover {
 a.nav {
   color: rgba(0,0,0,1);
 }
+
+/*td {
+  width: 28%;
+}*/
 
 
 
@@ -460,5 +464,9 @@ a.nav {
     font-size: x-large;
 
   }
+
+  /*td {
+    width: 50%;
+  }*/
 
 }
