@@ -11,7 +11,7 @@ body {
 }
 
 .jumbotron h1 {
-  font-family: 'Roboto Light', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 55px;  
   /*color: rgba(220, 237, 200, 1);*/
   /*color: rgba(104, 159, 56, 1);*/
@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Roboto Light', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 30px;
   color: rgba(104, 159, 56, 1);
 /*  color: rgba(0, 0, 0, 0.87);*/
@@ -69,7 +69,6 @@ p {
 p .date {
   color: rgba(0, 0, 0, 0.38);
 }
-
 
 
 
@@ -116,13 +115,6 @@ p .date {
   transition: color .25s ease-in-out;
 }
 
-
-
-.button > paper-ripple {
-  border-radius: 2px;
-  overflow: hidden;
-}
-
 .button.green {
   background-color: rgba(76,175,80,1);
   color: #fff;
@@ -154,8 +146,6 @@ p .date {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   transition-delay: 0s;
 }
-
-
 
 
 
